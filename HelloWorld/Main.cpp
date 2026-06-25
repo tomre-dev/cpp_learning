@@ -1,9 +1,8 @@
 #include <iostream>
 
-void Log(const char* message);
-
 int main()
 {
-	Log("Hello World");
+	int variable = 5;
+	std::cout << variable << std::endl;
 	std::cin.get();
 }

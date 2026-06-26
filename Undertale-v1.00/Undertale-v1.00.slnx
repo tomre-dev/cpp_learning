@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Undertale-v1.00.vcxproj" />
+  <Project Path="Undertale-v1.00.vcxproj" Id="3acf82f8-dd59-4e67-ab2a-2e92b84760c3" />
 </Solution>

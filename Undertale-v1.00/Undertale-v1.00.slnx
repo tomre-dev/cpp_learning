@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="HelloWorld.vcxproj" />
+  <Project Path="Undertale-v1.00.vcxproj" />
 </Solution>

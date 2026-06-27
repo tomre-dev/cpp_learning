@@ -78,7 +78,7 @@ int monster_turn()
 	if (choice == 1)
 	{
 		std::cout << "[Monster]:: the monster attacked you!" << std::endl;
-		return 12;
+		return 11;
 	}
 	else if (choice == 2)
 	{
@@ -88,7 +88,7 @@ int monster_turn()
 	else if (choice == 3)
 	{
 		std::cout << "[Monster]:: the monster insulted you!" << std::endl;
-		return 2;
+		return 1;
 	}
 	else
 	{

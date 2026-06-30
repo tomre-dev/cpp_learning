@@ -1,24 +1,18 @@
 #include <iostream>
-#include "Log.h"
+
+#define LOG(x) std::cout << x << std::endl;
+
+void increment(int& ptr)
+{
+	ptr++;
+}
+
+
 
 int main()
 {
-	for (int i = 0; i < 5; i++)
-	{
-		Log("Hello World");
-	}
+	int a = 5;
+	increment(a);
+	LOG(a);
+}   
 
-
-	Log("=================================");
-
-
-	int i = 0;
-	while (i < 5)
-	{
-		Log("Hello World");
-		i++;
-	}
-
-
-	std::cin.get();
-}

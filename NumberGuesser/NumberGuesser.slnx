@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="NumberGuesser.vcxproj" Id="cdabde2f-3cf1-4306-a876-48a2418aeb4d" />
+</Solution>

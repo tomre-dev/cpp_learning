@@ -4,22 +4,25 @@
 
 
 
-class Player
+class Log
 {
+private:
+	int m_LogLevel;
 public:
-	int x, y;
-	int speed;
-	void move(int xa , int ya)
+	void SetLevel(int level)
 	{
-		x += xa * speed;
-		y += ya * speed;
+		m_LogLevel = level;
 	}
+	void Warn(const char* message)
+	{
 
+	}
 };
 
 
 int main()
 {
-	Player Tommaso;
-	Tommaso.move(1, -1);
+	Log log;
+	log.SetLevel(LogLevelWarning);
+	log.Warn("hello!")
 }

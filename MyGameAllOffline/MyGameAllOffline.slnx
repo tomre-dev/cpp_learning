@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="MyGameAllOffline.vcxproj" Id="0b7bfed6-74ea-4de9-922e-6eff9544b965" />
+</Solution>

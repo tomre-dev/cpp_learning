@@ -25,10 +25,32 @@ public:
 		}
 	}
 
-	void Move(int nx , int ny)
+	void Move()
 	{
-		x += nx;
-		y += ny;
+		int input = 0;
+		std::cout << "Where you wanna move " << std::endl;
+		std::cout << " 1 - Right ->" << std::endl;
+		std::cout << " 2 - Left  <- " << std::endl;
+		std::cout << " 3 - up " << std::endl;
+		std::cout << " 4 - down " << std::endl;
+		std::cin >> input;
+
+		if (input == 1)
+		{
+			x++;
+		}
+		else if (input == 2)
+		{
+			x--;
+		}
+		else if (input == 3)
+		{
+			y++;
+		}
+		else if (input == 4)
+		{
+			y--;
+		}
 
 		std::cout << name << " Moved To " << " X " << x << " Y " << y << std::endl;
 	}
@@ -58,30 +80,7 @@ public:
 		}
 		if (input == 2)
 		{
-			int input = 0;
-			std::cout << "Where you wanna move " << std::endl;
-			std::cout << " 1 - Right ->" << std::endl;
-			std::cout << " 2 - Left  <- " << std::endl;
-			std::cout << " 3 - up " << std::endl;
-			std::cout << " 4 - down " << std::endl;
-			std::cin >> input;
-
-			if (input == 1)
-			{
-				Move(1, 0);
-			}
-			else if (input == 2)
-			{
-				Move(-1, 0);
-			}
-			else if (input == 3)
-			{
-				Move(0, 1);
-			}
-			else if (input == 4)
-			{
-				Move(0, -1);
-			}
+			
 
 		}
 

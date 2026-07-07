@@ -18,7 +18,7 @@ private:
 private:
 	void TakeDamage(int damage)
 	{
-		if ( damage > 0)
+		if (damage > 0)
 		{
 			hp -= damage;
 		}
@@ -119,7 +119,7 @@ public:
 
 	}
 
-	
+
 };
 
 
@@ -151,7 +151,7 @@ int main()
 		player2.take_input(player1);
 
 		std::cout << "-------------------------" << std::endl;
-	
+
 
 
 	}

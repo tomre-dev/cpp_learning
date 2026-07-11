@@ -1,5 +1,6 @@
 #pragma once
-//library
+
+
 float Mysqrt(float number)
 {
     float guess = number / 2.0f;
@@ -37,7 +38,7 @@ struct Vec3
         Y += y;
         Z += z;
     }
-    void Sum(Vec3 vec3)
+    void Sum(Vec3& vec3)
     {
         X += vec3.X;
         Y += vec3.Y;
@@ -50,35 +51,30 @@ struct Vec3
         Y -= y;
         Z -= z;
     }
-    void Sub(Vec3 vec3)
+    void Sub(Vec3& vec3)
     {
         X -= vec3.X;
         Y -= vec3.Y;
         Z -= vec3.Z;
     }
-    void Change(float x, float y, float z)
-    {
-        X = x;
-        Y = y;
-        Z = z;
-    }
-    void Change(Vec3 vec3)
-    {
-        X = vec3.X;
-        Y = vec3.Y;
-        Z = vec3.Z;
-    }
-    float lenght()
+
+    float Length()
     {
         return (Mysqrt(X * X + Y * Y + Z * Z));
     }
+
     void Multiply(float n)
     {
         X *= n;
         Y *= n;
         Z *= n;
     }
-
+    void Change(float x , float y , float z)
+    {
+        X = x;
+        Y = y;
+        Z = z;
+    }
 };
 
 struct Transform
@@ -108,33 +104,32 @@ struct Velocity
 
     Velocity()
     {
-        speed.Change(-0.50f, 0.0f, 0.0f);
+        speed = Vec3(0.0f, 0.0f, 0.0f);
     }
     Velocity(float x, float y, float z)
     {
-        speed.Change(x, y, z);
+        speed = Vec3(x, y, z);
     }
 };
 
 struct Gravity
 {
-    float currentgravity;
-    float constantgravity;
+    float currentGravity;
+    float constantGravity;
 
     Gravity(float n, float c)
     {
-        constantgravity = n;
-        currentgravity = c;
+        constantGravity = n;
+        currentGravity = c;
     }
     Gravity()
     {
-        constantgravity = 9.81;
-        currentgravity = 0;
-
+        constantGravity = 9.81f;
+        currentGravity = 0.0f;
     }
     void UpdateGravity()
     {
-        currentgravity += constantgravity;
+        currentGravity += constantGravity;
     }
 };
 
@@ -173,3 +168,9 @@ bool IsColliding(Object& obj1, Object& obj2)
     }
 }
 
+void UpdatePhysics(Object& obj)
+{
+    obj.rigidbody.gravity.UpdateGravity();
+    obj.rigidbody.velocity.speed.Sub(0.0f, obj.rigidbody.gravity.currentGravity, 0.0f);
+    obj.transform.position.Sum(obj.rigidbody.velocity.speed);
+}

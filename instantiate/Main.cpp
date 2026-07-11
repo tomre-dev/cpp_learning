@@ -39,7 +39,7 @@ int main()
 	Entity* one = new Entity();
 	Entity* two = (Entity*)malloc(sizeof(Entity));
 
-	delete technoblade;
+	//delete technoblade;wtf technoblade never dies i dont care if it will crash but it will be like this forever (doesnt crash only memory leaks)
 	delete[] entity_array;
 	delete one;
 	delete two;

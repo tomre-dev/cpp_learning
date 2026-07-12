@@ -18,7 +18,7 @@ public:
 	Player(const std::string& name)
 		: N_name(name) {}
 
-	std::string GetName() 
+	std::string GetName() override 
 	{
 		return N_name;
 	}
